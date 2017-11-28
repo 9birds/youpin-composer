@@ -10,7 +10,7 @@ WORKDIR /tmp
 RUN \
     apt-get update \
     && DEBIAN_FRONTEND="noninteractive" apt-get install -y git \
-    && curl -sS https://getcomposer.org/installer | php \
+    && curl -sS https://install.phpcomposer.com/installer | php \
     && mv composer.phar /usr/local/bin/composer \
     && composer self-update \
     && apt-get remove --purge curl -y \
